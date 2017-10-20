@@ -16,14 +16,27 @@ Bulma Multilevel Navbar
       </div>
     </div>
     <div id="navbar-main-menu" class="navbar-menu">
-      <div class="navbar-item  has-dropdown is-hoverable">
-        <div class="navbar-link">Multi</div>
-        <div class="navbar-dropdown">
-          <div class="navbar-item submenu has-dropdown is-hoverable">
-            <a class="navbar-link submenu" href="#">Level</a>
-            <div class="navbar-dropdown submenu">
-              <a class="navbar-item" href="#">Navbar</a>
+      <div class="navbar-start">
+        <a class="navbar-item" href="#">Example</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Multilevel</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Link 1</a>
+            <a class="navbar-item" href="#">Link 2</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-link">Navbar</div>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Link 3</a>
+            <div class="navbar-item submenu has-dropdown is-hoverable">
+              <div class="navbar-link submenu">Link 4</div>
+              <div class="navbar-dropdown submenu">
+                <a class="navbar-item" href="#">Link 4-1</a>
+                <a class="navbar-item" href="#">Link 4-2</a>
+              </div>
             </div>
+            <a class="navbar-item" href="#">Link 5</a>
           </div>
         </div>
       </div>
@@ -38,6 +51,7 @@ Bulma Multilevel Navbar
   background: transparent;
   padding-left: 0;
 }
+
 @media screen and (min-width: 1008px) {
   #menubar {
     border-bottom: 1px solid #ccc;
@@ -49,6 +63,9 @@ Bulma Multilevel Navbar
   }
   .navbar-dropdown {
     min-width: 160px;
+  }
+  .navbar-link {
+    cursor: pointer;
   }
   .navbar-item.submenu .navbar-link.submenu {
     padding-top: 0;
